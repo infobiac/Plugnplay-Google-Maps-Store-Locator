@@ -8,7 +8,7 @@ google.maps.event.addDomListener(window, 'load', function() {
 
   var data = new storeLocator.GMEDataFeed({
     tableId: '02649977418458951781-11613121305523030954',
-    apiKey: 'AIzaSyC8YoT5FJpDZTj4WNVyhyTE_Zkv6CQExyY',
+    apiKey: 'AIzaSyCmcx59BKzpHdysrF-SVvQ2PbRiwqCiO3s',
     propertiesModifier: function(props) {
 
       return {
