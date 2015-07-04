@@ -6,7 +6,7 @@ function MedicareDataSource() {
   $.extend(this, new storeLocator.StaticDataFeed);
 
   var that = this;
-  $.get('medicare.csv', function(data) {
+  $.get('bofalocations.csv', function(data) {
     that.setStores(that.parse_(data));
   });
 }
@@ -51,8 +51,7 @@ MedicareDataSource.prototype.parse_ = function(csv) {
 
     var store = new storeLocator.Store(row.uuid, position, features, {
       title: row.Fcilty_nam,
-      address: this.join_([shop, row.Street_add, locality], '<br>'),
-      hours: row.Hrs_of_bus
+      address: row.Address, '<br>')
     });
     stores.push(store);
   }
