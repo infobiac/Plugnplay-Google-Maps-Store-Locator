@@ -10,6 +10,7 @@ google.maps.event.addDomListener(window, 'load', function() {
 
   var view = new storeLocator.View(map, data, {
     geolocation: true,
+    features: data.getFeatures()
   });
 
   new storeLocator.Panel(panelDiv, {
