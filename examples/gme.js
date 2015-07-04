@@ -10,14 +10,9 @@ google.maps.event.addDomListener(window, 'load', function() {
     tableId: '02649977418458951781-11613121305523030954',
     apiKey: 'AIzaSyC8YoT5FJpDZTj4WNVyhyTE_Zkv6CQExyY',
     propertiesModifier: function(props) {
-      var shop = join([props.Shp_num_an, props.Shp_centre], ', ');
-      var locality = join([props.Locality, props.Postcode], ', ');
 
       return {
-        id: props.uuid,
-        title: props.Fcilty_nam,
-        address: join([shop, props.Street_add, locality], '<br>'),
-        hours: props.Hrs_of_bus
+        address: props.Address,
       };
     }
   });
