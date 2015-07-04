@@ -1,6 +1,5 @@
 google.maps.event.addDomListener(window, 'load', function() {
   var map = new google.maps.Map(document.getElementById('map-canvas'), {
-    center: new google.maps.LatLng(-28, 135),
     zoom: 4,
     mapTypeId: google.maps.MapTypeId.ROADMAP
   });
@@ -8,8 +7,8 @@ google.maps.event.addDomListener(window, 'load', function() {
   var panelDiv = document.getElementById('panel');
 
   var data = new storeLocator.GMEDataFeed({
-    tableId: '12421761926155747447-06672618218968397709',
-    apiKey: 'AIzaSyAtunhRg0VTElV-P7n4Agpm9tYlABQDCAM',
+    tableId: '02649977418458951781-11613121305523030954',
+    apiKey: 'AIzaSyC8YoT5FJpDZTj4WNVyhyTE_Zkv6CQExyY',
     propertiesModifier: function(props) {
       var shop = join([props.Shp_num_an, props.Shp_centre], ', ');
       var locality = join([props.Locality, props.Postcode], ', ');
@@ -24,7 +23,7 @@ google.maps.event.addDomListener(window, 'load', function() {
   });
 
   var view = new storeLocator.View(map, data, {
-    geolocation: false
+    geolocation: true
   });
 
   new storeLocator.Panel(panelDiv, {
