@@ -6,7 +6,7 @@ function MedicareDataSource() {
   $.extend(this, new storeLocator.StaticDataFeed);
 
   var that = this;
-  $.get('bofalocations.csv', function(data) {
+  $.get('medicare.csv', function(data) {
     that.setStores(that.parse_(data));
   });
 }
